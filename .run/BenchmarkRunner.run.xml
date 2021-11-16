@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BenchmarkRunner" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="LD_LIBRARY_PATH" value="$PROJECT_DIR$/../async-profiler/build/" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.tsypanov.benchmark.BenchmarkRunner" />
+    <module name="assembly-profiling-and-all-all-all" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

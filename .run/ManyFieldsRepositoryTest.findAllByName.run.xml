@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ManyFieldsRepositoryTest.findAllByName" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="assembly-profiling-and-all-all-all" />
+    <option name="PACKAGE_NAME" value="com.tsypanov" />
+    <option name="MAIN_CLASS_NAME" value="com.tsypanov.ManyFieldsRepositoryTest" />
+    <option name="METHOD_NAME" value="findAllByName" />
+    <option name="TEST_OBJECT" value="method" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

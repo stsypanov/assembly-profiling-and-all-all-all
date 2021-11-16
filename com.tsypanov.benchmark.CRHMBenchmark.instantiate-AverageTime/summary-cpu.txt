@@ -1,0 +1,1846 @@
+--- Execution profile ---
+Total samples       : 1535
+unknown_Java        : 4 (0.26%)
+not_walkable_Java   : 2 (0.13%)
+
+--- 3660835571 ns (23.84%), 366 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke
+  [10] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 3631047787 ns (23.65%), 363 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 2039968134 ns (13.28%), 204 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 1850129132 ns (12.05%), 185 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 669885551 ns (4.36%), 67 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 329989631 ns (2.15%), 33 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 319969731 ns (2.08%), 32 samples
+  [ 0] java.lang.ref.ReferenceQueue.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 6] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 8] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [10] sun.reflect.NativeMethodAccessorImpl.invoke
+  [11] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 279927288 ns (1.82%), 28 samples
+  [ 0] java.util.concurrent.locks.ReentrantLock.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 259991874 ns (1.69%), 26 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke
+  [10] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 190046749 ns (1.24%), 19 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 180043241 ns (1.17%), 18 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 179987101 ns (1.17%), 18 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 100008794 ns (0.65%), 10 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 80047342 ns (0.52%), 8 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 79949711 ns (0.52%), 8 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 70035386 ns (0.46%), 7 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 69998448 ns (0.46%), 7 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 69969495 ns (0.46%), 7 samples
+  [ 0] java.lang.ref.ReferenceQueue.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 6] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 8] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [10] sun.reflect.NativeMethodAccessorImpl.invoke
+  [11] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 60498332 ns (0.39%), 6 samples
+  [ 0] smp_call_function_single_[k]
+  [ 1] smp_call_function_many_cond_[k]
+  [ 2] on_each_cpu_cond_mask_[k]
+  [ 3] native_flush_tlb_others_[k]
+  [ 4] flush_tlb_mm_range_[k]
+  [ 5] change_protection_[k]
+  [ 6] mprotect_fixup_[k]
+  [ 7] do_mprotect_pkey_[k]
+  [ 8] __x64_sys_mprotect_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] __mprotect
+  [12] os::serialize_thread_states()
+  [13] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [14] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [15] JfrThreadSampler::run()
+  [16] java_start(Thread*)
+  [17] start_thread
+
+--- 59989215 ns (0.39%), 6 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 50285061 ns (0.33%), 5 samples
+  [ 0] SpinPause
+  [ 1] StealTask::do_it(GCTaskManager*, unsigned int)
+  [ 2] GCTaskThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 50020696 ns (0.33%), 5 samples
+  [ 0] java.lang.ref.ReferenceQueue.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 6] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 8] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [10] sun.reflect.NativeMethodAccessorImpl.invoke
+  [11] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 40081010 ns (0.26%), 4 samples
+  [ 0] StringTable::buckets_unlink_or_oops_do(BoolObjectClosure*, OopClosure*, int, int, BasicHashtable<(MemoryType)9>::BucketUnlinkContext*)
+  [ 1] StringTable::unlink_or_oops_do(BoolObjectClosure*, OopClosure*, int*, int*)
+  [ 2] PSScavenge::invoke_no_policy()
+  [ 3] PSScavenge::invoke()
+  [ 4] ParallelScavengeHeap::failed_mem_allocate(unsigned long)
+  [ 5] VM_ParallelGCFailedAllocation::doit()
+  [ 6] VM_Operation::evaluate()
+  [ 7] VMThread::evaluate_operation(VM_Operation*) [clone .constprop.0]
+  [ 8] VMThread::loop()
+  [ 9] VMThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 40019542 ns (0.26%), 4 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.calculateShift
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 4] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 6] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 40007736 ns (0.26%), 4 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 39986243 ns (0.26%), 4 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 30008583 ns (0.20%), 3 samples
+  [ 0] [unknown_Java]
+
+--- 30004006 ns (0.20%), 3 samples
+  [ 0] org.openjdk.jmh.infra.Blackhole.consumeFull
+  [ 1] org.openjdk.jmh.infra.Blackhole.consume
+  [ 2] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 4] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 20152996 ns (0.13%), 2 samples
+  [ 0] flush_tlb_mm_range_[k]
+  [ 1] change_protection_[k]
+  [ 2] mprotect_fixup_[k]
+  [ 3] do_mprotect_pkey_[k]
+  [ 4] __x64_sys_mprotect_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __mprotect
+  [ 8] os::serialize_thread_states()
+  [ 9] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [10] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.1]
+  [11] JfrThreadSampler::run()
+  [12] java_start(Thread*)
+  [13] start_thread
+
+--- 20134389 ns (0.13%), 2 samples
+  [ 0] pthread_kill
+
+--- 20117113 ns (0.13%), 2 samples
+  [ 0] PSScavengeKlassClosure::do_klass(Klass*)
+  [ 1] ClassLoaderDataGraph::oops_do(OopClosure*, KlassClosure*, bool)
+  [ 2] ScavengeRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 3] GCTaskThread::run()
+  [ 4] java_start(Thread*)
+  [ 5] start_thread
+
+--- 19999683 ns (0.13%), 2 samples
+  [ 0] java.lang.reflect.Array.newInstance
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 19998852 ns (0.13%), 2 samples
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.calculateShift
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 19984293 ns (0.13%), 2 samples
+  [ 0] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] InstanceKlass::allocate_instance(Thread*)
+  [ 4] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 5] java.lang.ref.ReferenceQueue.<init>
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [10] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [11] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [12] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [13] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [14] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [15] sun.reflect.NativeMethodAccessorImpl.invoke
+  [16] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [17] java.lang.reflect.Method.invoke
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.Executors$RunnableAdapter.call
+  [22] java.util.concurrent.FutureTask.run
+  [23] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [24] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [25] java.lang.Thread.run
+
+--- 10106559 ns (0.07%), 1 sample
+  [ 0] __GI___pthread_getspecific
+  [ 1] JfrThreadSampler::run()
+  [ 2] java_start(Thread*)
+  [ 3] start_thread
+
+--- 10092490 ns (0.07%), 1 sample
+  [ 0] smp_call_function_single_[k]
+  [ 1] smp_call_function_many_cond_[k]
+  [ 2] on_each_cpu_cond_mask_[k]
+  [ 3] native_flush_tlb_others_[k]
+  [ 4] flush_tlb_mm_range_[k]
+  [ 5] change_protection_[k]
+  [ 6] mprotect_fixup_[k]
+  [ 7] do_mprotect_pkey_[k]
+  [ 8] __x64_sys_mprotect_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] __mprotect
+  [12] os::serialize_thread_states()
+  [13] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [14] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.1]
+  [15] JfrThreadSampler::run()
+  [16] java_start(Thread*)
+  [17] start_thread
+
+--- 10091593 ns (0.07%), 1 sample
+  [ 0] CodeHeap::find_start(void*) const
+  [ 1] frame::sender_for_entry_frame(RegisterMap*) const
+  [ 2] frame::sender(RegisterMap*) const
+  [ 3] JfrStackTrace::record_thread(JavaThread&, frame&)
+  [ 4] OSThreadSamplerCallback::call()
+  [ 5] os::ThreadCrashProtection::call(os::CrashProtectionCallback&)
+  [ 6] OSThreadSampler::do_task(os::SuspendedThreadTaskContext const&)
+  [ 7] os::SuspendedThreadTask::internal_do_task()
+  [ 8] os::SuspendedThreadTask::run()
+  [ 9] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [10] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [11] JfrThreadSampler::run()
+  [12] java_start(Thread*)
+  [13] start_thread
+
+--- 10085072 ns (0.07%), 1 sample
+  [ 0] _raw_spin_lock_[k]
+  [ 1] change_p4d_range_[k]
+  [ 2] change_protection_[k]
+  [ 3] mprotect_fixup_[k]
+  [ 4] do_mprotect_pkey_[k]
+  [ 5] __x64_sys_mprotect_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __mprotect
+  [ 9] os::serialize_thread_states()
+  [10] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [11] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [12] JfrThreadSampler::run()
+  [13] java_start(Thread*)
+  [14] start_thread
+
+--- 10082317 ns (0.07%), 1 sample
+  [ 0] on_each_cpu_cond_mask_[k]
+  [ 1] native_flush_tlb_others_[k]
+  [ 2] flush_tlb_mm_range_[k]
+  [ 3] change_protection_[k]
+  [ 4] mprotect_fixup_[k]
+  [ 5] do_mprotect_pkey_[k]
+  [ 6] __x64_sys_mprotect_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __mprotect
+  [10] os::serialize_thread_states()
+  [11] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [12] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [13] JfrThreadSampler::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 10078475 ns (0.07%), 1 sample
+  [ 0] __malloc
+  [ 1] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 2] JfrThreadSampler::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 10077395 ns (0.07%), 1 sample
+  [ 0] JfrStackTraceRepository::add_trace(JfrStackTrace const&)
+  [ 1] JfrStackTraceRepository::add(JfrStackTrace const&)
+  [ 2] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [ 3] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 4] JfrThreadSampler::run()
+  [ 5] java_start(Thread*)
+  [ 6] start_thread
+
+--- 10077342 ns (0.07%), 1 sample
+  [ 0] Thread::is_Compiler_thread() const
+  [ 1] JfrThreadSampler::run()
+  [ 2] java_start(Thread*)
+  [ 3] start_thread
+
+--- 10075282 ns (0.07%), 1 sample
+  [ 0] on_each_cpu_cond_mask_[k]
+  [ 1] native_flush_tlb_others_[k]
+  [ 2] flush_tlb_mm_range_[k]
+  [ 3] change_protection_[k]
+  [ 4] mprotect_fixup_[k]
+  [ 5] do_mprotect_pkey_[k]
+  [ 6] __x64_sys_mprotect_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __mprotect
+  [10] os::serialize_thread_states()
+  [11] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [12] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.1]
+  [13] JfrThreadSampler::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 10074795 ns (0.07%), 1 sample
+  [ 0] CardTableExtension::scavenge_contents_parallel(ObjectStartArray*, MutableSpace*, HeapWord*, PSPromotionManager*, unsigned int, unsigned int)
+  [ 1] OldToYoungRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 2] GCTaskThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 10073097 ns (0.07%), 1 sample
+  [ 0] x2apic_send_IPI_[k]
+  [ 1] native_send_call_func_single_ipi_[k]
+  [ 2] send_call_function_single_ipi_[k]
+  [ 3] __smp_call_single_queue_[k]
+  [ 4] generic_exec_single_[k]
+  [ 5] smp_call_function_single_[k]
+  [ 6] smp_call_function_many_cond_[k]
+  [ 7] on_each_cpu_cond_mask_[k]
+  [ 8] native_flush_tlb_others_[k]
+  [ 9] flush_tlb_mm_range_[k]
+  [10] change_protection_[k]
+  [11] mprotect_fixup_[k]
+  [12] do_mprotect_pkey_[k]
+  [13] __x64_sys_mprotect_[k]
+  [14] do_syscall_64_[k]
+  [15] entry_SYSCALL_64_after_hwframe_[k]
+  [16] __mprotect
+  [17] os::serialize_thread_states()
+  [18] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [19] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [20] JfrThreadSampler::run()
+  [21] java_start(Thread*)
+  [22] start_thread
+
+--- 10072600 ns (0.07%), 1 sample
+  [ 0] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 1] JfrThreadSampler::run()
+  [ 2] java_start(Thread*)
+  [ 3] start_thread
+
+--- 10071227 ns (0.07%), 1 sample
+  [ 0] pthread_sigmask
+  [ 1] OSThreadSampler::do_task(os::SuspendedThreadTaskContext const&)
+  [ 2] os::SuspendedThreadTask::internal_do_task()
+  [ 3] os::SuspendedThreadTask::run()
+  [ 4] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [ 5] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 6] JfrThreadSampler::run()
+  [ 7] java_start(Thread*)
+  [ 8] start_thread
+
+--- 10069648 ns (0.07%), 1 sample
+  [ 0] HandleMark::pop_and_restore()
+  [ 1] JVM_MonitorWait
+  [ 2] java.lang.Object.wait
+  [ 3] jdk.jfr.internal.PlatformRecorder.takeNap
+  [ 4] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [ 5] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [ 6] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [ 7] java.lang.Thread.run
+
+--- 10066995 ns (0.07%), 1 sample
+  [ 0] SimpleThresholdPolicy::compile(methodHandle, int, CompLevel, JavaThread*)
+  [ 1] SimpleThresholdPolicy::event(methodHandle, methodHandle, int, int, CompLevel, nmethod*, JavaThread*)
+  [ 2] InterpreterRuntime::frequency_counter_overflow_inner(JavaThread*, unsigned char*)
+  [ 3] InterpreterRuntime::frequency_counter_overflow(JavaThread*, unsigned char*)
+  [ 4] jdk.jfr.internal.PlatformEventType.isJDK
+  [ 5] jdk.jfr.internal.RequestEngine$RequestHook.execute
+  [ 6] jdk.jfr.internal.RequestEngine$RequestHook.access$400
+  [ 7] jdk.jfr.internal.RequestEngine.run_requests
+  [ 8] jdk.jfr.internal.RequestEngine.doPeriodic
+  [ 9] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [10] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [11] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [12] java.lang.Thread.run
+
+--- 10066155 ns (0.07%), 1 sample
+  [ 0] JavaThread::is_Java_thread() const
+  [ 1] JfrEvent<EventJavaMonitorWait>::write_event()
+  [ 2] ObjectMonitor::wait(long, bool, Thread*)
+  [ 3] ObjectSynchronizer::wait(Handle, long, Thread*)
+  [ 4] JVM_MonitorWait
+  [ 5] java.lang.Object.wait
+  [ 6] jdk.jfr.internal.PlatformRecorder.takeNap
+  [ 7] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [ 8] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [ 9] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [10] java.lang.Thread.run
+
+--- 10065568 ns (0.07%), 1 sample
+  [ 0] oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)
+  [ 1] PSRootsClosure<false>::do_oop(oopDesc**)
+  [ 2] OopMapSet::all_do(frame const*, RegisterMap const*, OopClosure*, void (*)(oopDesc**, oopDesc**), OopClosure*)
+  [ 3] frame::oops_do_internal(OopClosure*, CLDClosure*, CodeBlobClosure*, RegisterMap*, bool)
+  [ 4] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [ 5] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 6] GCTaskThread::run()
+  [ 7] java_start(Thread*)
+  [ 8] start_thread
+
+--- 10065059 ns (0.07%), 1 sample
+  [ 0] do_mprotect_pkey_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __mprotect
+  [ 4] os::serialize_thread_states()
+  [ 5] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [ 6] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.1]
+  [ 7] JfrThreadSampler::run()
+  [ 8] java_start(Thread*)
+  [ 9] start_thread
+
+--- 10064093 ns (0.07%), 1 sample
+  [ 0] do_send_sig_info_[k]
+  [ 1] do_tkill_[k]
+  [ 2] __x64_sys_tgkill_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] pthread_kill
+
+--- 10064040 ns (0.07%), 1 sample
+  [ 0] java.lang.AbstractStringBuilder.append
+  [ 1] java.lang.StringBuilder.append
+  [ 2] jdk.jfr.internal.Type.getLogName
+  [ 3] jdk.jfr.internal.RequestEngine$RequestHook.lambda$execute$0
+  [ 4] jdk.jfr.internal.RequestEngine$RequestHook$$Lambda$65/1847313285.get
+  [ 5] jdk.jfr.internal.Logger.log
+  [ 6] jdk.jfr.internal.RequestEngine$RequestHook.execute
+  [ 7] jdk.jfr.internal.RequestEngine$RequestHook.access$400
+  [ 8] jdk.jfr.internal.RequestEngine.run_requests
+  [ 9] jdk.jfr.internal.RequestEngine.doPeriodic
+  [10] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [11] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [12] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [13] java.lang.Thread.run
+
+--- 10062951 ns (0.07%), 1 sample
+  [ 0] do_tkill_[k]
+  [ 1] __x64_sys_tgkill_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] pthread_kill
+
+--- 10062524 ns (0.07%), 1 sample
+  [ 0] pthread_mutex_lock
+  [ 1] GCTaskThread::run()
+  [ 2] java_start(Thread*)
+  [ 3] start_thread
+
+--- 10061546 ns (0.07%), 1 sample
+  [ 0] ParallelTaskTerminator::offer_termination(TerminatorTerminator*)
+  [ 1] StealTask::do_it(GCTaskManager*, unsigned int)
+  [ 2] GCTaskThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 10061344 ns (0.07%), 1 sample
+  [ 0] Monitor::ILock(Thread*)
+  [ 1] Monitor::lock_without_safepoint_check()
+  [ 2] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 3] JfrThreadSampler::run()
+  [ 4] java_start(Thread*)
+  [ 5] start_thread
+
+--- 10060961 ns (0.07%), 1 sample
+  [ 0] __GI___pthread_getspecific
+  [ 1] JfrStackTraceRepository::add_trace(JfrStackTrace const&)
+  [ 2] JfrStackTraceRepository::add(JfrStackTrace const&)
+  [ 3] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [ 4] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [ 5] JfrThreadSampler::run()
+  [ 6] java_start(Thread*)
+  [ 7] start_thread
+
+--- 10058605 ns (0.07%), 1 sample
+  [ 0] common_nsleep_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] clock_nanosleep@@GLIBC_2.17
+
+--- 10055236 ns (0.07%), 1 sample
+  [ 0] ParallelScavengeHeap::can_elide_tlab_store_barriers() const
+  [ 1] java.util.Arrays.copyOfRange
+  [ 2] java.lang.String.<init>
+  [ 3] java.lang.StringBuilder.toString
+  [ 4] jdk.jfr.internal.RequestEngine$RequestHook.lambda$execute$0
+  [ 5] jdk.jfr.internal.RequestEngine$RequestHook$$Lambda$65/1847313285.get
+  [ 6] jdk.jfr.internal.Logger.log
+  [ 7] jdk.jfr.internal.RequestEngine$RequestHook.execute
+  [ 8] jdk.jfr.internal.RequestEngine$RequestHook.access$400
+  [ 9] jdk.jfr.internal.RequestEngine.run_requests
+  [10] jdk.jfr.internal.RequestEngine.doPeriodic
+  [11] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [12] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [13] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [14] java.lang.Thread.run
+
+--- 10053566 ns (0.07%), 1 sample
+  [ 0] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] TypeArrayKlass::allocate_common(int, bool, Thread*)
+  [ 4] OptoRuntime::new_array_nozero_C(Klass*, int, JavaThread*)
+  [ 5] java.util.Arrays.copyOfRange
+  [ 6] java.lang.String.<init>
+  [ 7] java.lang.StringBuilder.toString
+  [ 8] jdk.jfr.internal.RequestEngine$RequestHook.lambda$execute$0
+  [ 9] jdk.jfr.internal.RequestEngine$RequestHook$$Lambda$65/1847313285.get
+  [10] jdk.jfr.internal.Logger.log
+  [11] jdk.jfr.internal.RequestEngine$RequestHook.execute
+  [12] jdk.jfr.internal.RequestEngine$RequestHook.access$400
+  [13] jdk.jfr.internal.RequestEngine.run_requests
+  [14] jdk.jfr.internal.RequestEngine.doPeriodic
+  [15] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [16] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [17] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [18] java.lang.Thread.run
+
+--- 10053415 ns (0.07%), 1 sample
+  [ 0] __malloc
+  [ 1] OopMapCache::compute_one_oop_map(methodHandle, int, InterpreterOopMap*)
+  [ 2] OopMapCache::lookup(methodHandle, int, InterpreterOopMap*) const
+  [ 3] InstanceKlass::mask_for(methodHandle, int, InterpreterOopMap*)
+  [ 4] Method::mask_for(int, InterpreterOopMap*)
+  [ 5] frame::oops_interpreted_do(OopClosure*, CLDClosure*, RegisterMap const*, bool)
+  [ 6] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [ 7] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 8] GCTaskThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 10052887 ns (0.07%), 1 sample
+  [ 0] native signature handlers
+  [ 1] jdk.jfr.internal.JVM.emitEvent
+  [ 2] jdk.jfr.internal.RequestEngine$RequestHook.execute
+  [ 3] jdk.jfr.internal.RequestEngine$RequestHook.access$400
+  [ 4] jdk.jfr.internal.RequestEngine.run_requests
+  [ 5] jdk.jfr.internal.RequestEngine.doPeriodic
+  [ 6] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [ 7] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [ 8] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [ 9] java.lang.Thread.run
+
+--- 10052307 ns (0.07%), 1 sample
+  [ 0] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 1] JfrStackTraceRepository::record(Thread*, int)
+  [ 2] JfrEvent<EventJavaMonitorWait>::write_event()
+  [ 3] ObjectMonitor::wait(long, bool, Thread*)
+  [ 4] ObjectSynchronizer::wait(Handle, long, Thread*)
+  [ 5] JVM_MonitorWait
+  [ 6] java.lang.Object.wait
+  [ 7] jdk.jfr.internal.PlatformRecorder.takeNap
+  [ 8] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [ 9] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [10] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [11] java.lang.Thread.run
+
+--- 10049128 ns (0.07%), 1 sample
+  [ 0] nmethod::find_pc_desc_internal(unsigned char*, bool)
+  [ 1] JfrGetCallTrace::find_top_frame(frame&, Method**, frame&)
+  [ 2] JfrGetCallTrace::get_topframe(void*, frame&)
+  [ 3] OSThreadSamplerCallback::call()
+  [ 4] os::ThreadCrashProtection::call(os::CrashProtectionCallback&)
+  [ 5] OSThreadSampler::do_task(os::SuspendedThreadTaskContext const&)
+  [ 6] os::SuspendedThreadTask::internal_do_task()
+  [ 7] os::SuspendedThreadTask::run()
+  [ 8] JfrThreadSampleClosure::do_sample_thread(JavaThread*, JfrStackFrame*, unsigned int, JfrSampleType) [clone .part.0]
+  [ 9] JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+  [10] JfrThreadSampler::run()
+  [11] java_start(Thread*)
+  [12] start_thread
+
+--- 10049119 ns (0.07%), 1 sample
+  [ 0] JfrEvent<EventJavaMonitorWait>::write_event()
+  [ 1] ObjectMonitor::wait(long, bool, Thread*)
+  [ 2] ObjectSynchronizer::wait(Handle, long, Thread*)
+  [ 3] JVM_MonitorWait
+  [ 4] java.lang.Object.wait
+  [ 5] jdk.jfr.internal.PlatformRecorder.takeNap
+  [ 6] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [ 7] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [ 8] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [ 9] java.lang.Thread.run
+
+--- 10045264 ns (0.07%), 1 sample
+  [ 0] frame::oops_interpreted_do(OopClosure*, CLDClosure*, RegisterMap const*, bool)
+  [ 1] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [ 2] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 3] GCTaskThread::run()
+  [ 4] java_start(Thread*)
+  [ 5] start_thread
+
+--- 10043144 ns (0.07%), 1 sample
+  [ 0] __pthread_mutex_unlock
+  [ 1] Monitor::IWait(Thread*, long)
+  [ 2] Monitor::wait(bool, long, bool)
+  [ 3] GCTaskManager::get_task(unsigned int)
+  [ 4] GCTaskThread::run()
+  [ 5] java_start(Thread*)
+  [ 6] start_thread
+
+--- 10040241 ns (0.07%), 1 sample
+  [ 0] ClassLoaderData::ChunkedHandleList::oops_do(OopClosure*)
+  [ 1] ClassLoaderData::oops_do(OopClosure*, KlassClosure*, bool)
+  [ 2] ClassLoaderDataGraph::oops_do(OopClosure*, KlassClosure*, bool)
+  [ 3] ScavengeRootsTask::do_it(GCTaskManager*, unsigned int)
+  [ 4] GCTaskThread::run()
+  [ 5] java_start(Thread*)
+  [ 6] start_thread
+
+--- 10039798 ns (0.07%), 1 sample
+  [ 0] ciMethod::ciMethod(methodHandle, ciInstanceKlass*)
+  [ 1] ciObjectFactory::create_new_metadata(Metadata*)
+  [ 2] ciObjectFactory::get_metadata(Metadata*)
+  [ 3] ciEnv::get_method_from_handle(Method*)
+  [ 4] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 5] CompileBroker::compiler_thread_loop()
+  [ 6] JavaThread::thread_main_inner()
+  [ 7] JavaThread::run()
+  [ 8] java_start(Thread*)
+  [ 9] start_thread
+
+--- 10038422 ns (0.07%), 1 sample
+  [ 0] PhaseChaitin::interfere_with_live(unsigned int, IndexSet*)
+  [ 1] PhaseChaitin::build_ifg_physical(ResourceArea*)
+  [ 2] PhaseChaitin::Register_Allocate()
+  [ 3] Compile::Code_Gen()
+  [ 4] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 5] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 6] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 7] CompileBroker::compiler_thread_loop()
+  [ 8] JavaThread::thread_main_inner()
+  [ 9] JavaThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 10036358 ns (0.07%), 1 sample
+  [ 0] vma_merge_[k]
+  [ 1] mprotect_fixup_[k]
+  [ 2] do_mprotect_pkey_[k]
+  [ 3] __x64_sys_mprotect_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __mprotect
+  [ 7] SafepointSynchronize::end()
+  [ 8] VMThread::loop()
+  [ 9] VMThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 10035126 ns (0.07%), 1 sample
+  [ 0] os::PlatformEvent::park()
+  [ 1] Monitor::IWait(Thread*, long)
+  [ 2] Monitor::wait(bool, long, bool)
+  [ 3] GCTaskManager::get_task(unsigned int)
+  [ 4] GCTaskThread::run()
+  [ 5] java_start(Thread*)
+  [ 6] start_thread
+
+--- 10032834 ns (0.07%), 1 sample
+  [ 0] __strchrnul_avx2
+  [ 1] __vsnprintf_internal
+  [ 2] [unknown]
+
+--- 10031856 ns (0.07%), 1 sample
+  [ 0] __handle_mm_fault_[k]
+  [ 1] handle_mm_fault_[k]
+  [ 2] do_user_addr_fault_[k]
+  [ 3] exc_page_fault_[k]
+  [ 4] asm_exc_page_fault_[k]
+  [ 5] ObjectMonitor::wait(long, bool, Thread*)
+  [ 6] ObjectSynchronizer::wait(Handle, long, Thread*)
+  [ 7] JVM_MonitorWait
+  [ 8] java.lang.Object.wait
+  [ 9] jdk.jfr.internal.PlatformRecorder.takeNap
+  [10] jdk.jfr.internal.PlatformRecorder.periodicTask
+  [11] jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$1
+  [12] jdk.jfr.internal.PlatformRecorder$$Lambda$53/1588110014.run
+  [13] java.lang.Thread.run
+
+--- 10023682 ns (0.07%), 1 sample
+  [ 0] Compile::Output()
+  [ 1] Compile::Code_Gen()
+  [ 2] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 3] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 4] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 5] CompileBroker::compiler_thread_loop()
+  [ 6] JavaThread::thread_main_inner()
+  [ 7] JavaThread::run()
+  [ 8] java_start(Thread*)
+  [ 9] start_thread
+
+--- 10019005 ns (0.07%), 1 sample
+  [ 0] SafepointSynchronize::end()
+  [ 1] VMThread::loop()
+  [ 2] VMThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 10018606 ns (0.07%), 1 sample
+  [ 0] Parse::do_one_bytecode()
+  [ 1] Parse::do_one_block()
+  [ 2] Parse::do_all_blocks()
+  [ 3] Parse::Parse(JVMState*, ciMethod*, float)
+  [ 4] ParseGenerator::generate(JVMState*)
+  [ 5] PredictedCallGenerator::generate(JVMState*)
+  [ 6] Parse::do_call()
+  [ 7] Parse::do_one_bytecode()
+  [ 8] Parse::do_one_block()
+  [ 9] Parse::do_all_blocks()
+  [10] Parse::Parse(JVMState*, ciMethod*, float)
+  [11] ParseGenerator::generate(JVMState*)
+  [12] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [13] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [14] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [15] CompileBroker::compiler_thread_loop()
+  [16] JavaThread::thread_main_inner()
+  [17] JavaThread::run()
+  [18] java_start(Thread*)
+  [19] start_thread
+
+--- 10015589 ns (0.07%), 1 sample
+  [ 0] do_user_addr_fault_[k]
+  [ 1] exc_page_fault_[k]
+  [ 2] asm_exc_page_fault_[k]
+  [ 3] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 4] java.lang.reflect.Array.newInstance
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 7] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 8] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 9] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [10] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [11] sun.reflect.NativeMethodAccessorImpl.invoke
+  [12] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [13] java.lang.reflect.Method.invoke
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.Executors$RunnableAdapter.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [21] java.lang.Thread.run
+
+--- 10013833 ns (0.07%), 1 sample
+  [ 0] ObjectSampler::add(HeapWord*, unsigned long, unsigned long, JfrStackTrace*, JavaThread*)
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] InstanceKlass::allocate_instance(Thread*)
+  [ 4] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [10] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [12] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [14] sun.reflect.NativeMethodAccessorImpl.invoke
+  [15] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [16] java.lang.reflect.Method.invoke
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.Executors$RunnableAdapter.call
+  [21] java.util.concurrent.FutureTask.run
+  [22] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [23] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [24] java.lang.Thread.run
+
+--- 10012132 ns (0.07%), 1 sample
+  [ 0] get_signal_[k]
+  [ 1] arch_do_signal_or_restart_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] irqentry_exit_to_user_mode_[k]
+  [ 4] irqentry_exit_[k]
+  [ 5] sysvec_reschedule_ipi_[k]
+  [ 6] asm_sysvec_reschedule_ipi_[k]
+  [ 7] [unknown_Java]
+
+--- 10009532 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 10009272 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 2] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 4] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 10008017 ns (0.07%), 1 sample
+  [ 0] get_signal_[k]
+  [ 1] arch_do_signal_or_restart_[k]
+  [ 2] exit_to_user_mode_prepare_[k]
+  [ 3] syscall_exit_to_user_mode_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __GI___sigsuspend
+  [ 7] __restore_rt
+  [ 8] [unknown]
+  [ 9] [not_walkable_Java]
+
+--- 10007390 ns (0.07%), 1 sample
+  [ 0] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] post_allocation_notify(KlassHandle, oopDesc*, int)
+  [ 4] InstanceKlass::allocate_objArray(int, int, Thread*)
+  [ 5] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 6] java.lang.reflect.Array.newInstance
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10007232 ns (0.07%), 1 sample
+  [ 0] JfrStackTraceRepository::add_trace(JfrStackTrace const&)
+  [ 1] JfrStackTraceRepository::add(JfrStackTrace const*, JavaThread*)
+  [ 2] ObjectSampler::add(HeapWord*, unsigned long, unsigned long, JfrStackTrace*, JavaThread*)
+  [ 3] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 4] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 5] post_allocation_notify(KlassHandle, oopDesc*, int)
+  [ 6] InstanceKlass::allocate_objArray(int, int, Thread*)
+  [ 7] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 8] java.lang.reflect.Array.newInstance
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [10] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [11] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [12] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [13] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [14] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [15] sun.reflect.NativeMethodAccessorImpl.invoke
+  [16] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [17] java.lang.reflect.Method.invoke
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.Executors$RunnableAdapter.call
+  [22] java.util.concurrent.FutureTask.run
+  [23] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [24] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [25] java.lang.Thread.run
+
+--- 10007065 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 10006959 ns (0.07%), 1 sample
+  [ 0] frame::interpreter_frame_method() const
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] InstanceKlass::allocate_instance(Thread*)
+  [ 4] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 5] java.util.concurrent.locks.ReentrantLock.<init>
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10005522 ns (0.07%), 1 sample
+  [ 0] org.openjdk.jmh.infra.Blackhole.consumeFull
+  [ 1] org.openjdk.jmh.infra.Blackhole.consume
+  [ 2] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 4] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 10004779 ns (0.07%), 1 sample
+  [ 0] JfrStackTraceRepository::add_trace(JfrStackTrace const&)
+  [ 1] JfrStackTraceRepository::add(JfrStackTrace const*, JavaThread*)
+  [ 2] ObjectSampler::add(HeapWord*, unsigned long, unsigned long, JfrStackTrace*, JavaThread*)
+  [ 3] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 4] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 5] InstanceKlass::allocate_instance(Thread*)
+  [ 6] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 7] java.util.concurrent.locks.ReentrantLock.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [10] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [11] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [12] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [13] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [14] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [15] sun.reflect.NativeMethodAccessorImpl.invoke
+  [16] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [17] java.lang.reflect.Method.invoke
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.Executors$RunnableAdapter.call
+  [22] java.util.concurrent.FutureTask.run
+  [23] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [24] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [25] java.lang.Thread.run
+
+--- 10004400 ns (0.07%), 1 sample
+  [ 0] MachOper::num_edges() const
+  [ 1] PhaseChaitin::gather_lrg_masks(bool)
+  [ 2] PhaseChaitin::Register_Allocate()
+  [ 3] Compile::Code_Gen()
+  [ 4] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 5] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 6] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 7] CompileBroker::compiler_thread_loop()
+  [ 8] JavaThread::thread_main_inner()
+  [ 9] JavaThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 10003873 ns (0.07%), 1 sample
+  [ 0] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] InstanceKlass::allocate_instance(Thread*)
+  [ 4] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10003536 ns (0.07%), 1 sample
+  [ 0] __lock_text_start_[k]
+  [ 1] update_blocked_averages_[k]
+  [ 2] run_rebalance_domains_[k]
+  [ 3] __softirqentry_text_start_[k]
+  [ 4] asm_call_sysvec_on_stack_[k]
+  [ 5] do_softirq_own_stack_[k]
+  [ 6] irq_exit_rcu_[k]
+  [ 7] sysvec_apic_timer_interrupt_[k]
+  [ 8] asm_sysvec_apic_timer_interrupt_[k]
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [10] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [11] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [12] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [13] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [14] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [15] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [16] sun.reflect.NativeMethodAccessorImpl.invoke
+  [17] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [18] java.lang.reflect.Method.invoke
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [21] java.util.concurrent.FutureTask.run
+  [22] java.util.concurrent.Executors$RunnableAdapter.call
+  [23] java.util.concurrent.FutureTask.run
+  [24] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [25] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [26] java.lang.Thread.run
+
+--- 10002150 ns (0.07%), 1 sample
+  [ 0] CodeHeap::find_start(void*) const
+  [ 1] JfrStackTrace::record_safe(JavaThread*, int, bool)
+  [ 2] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 3] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 4] post_allocation_notify(KlassHandle, oopDesc*, int)
+  [ 5] InstanceKlass::allocate_objArray(int, int, Thread*)
+  [ 6] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap$Segment.createReferenceArray
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 9] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [10] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [11] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [12] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [13] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [14] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [15] sun.reflect.NativeMethodAccessorImpl.invoke
+  [16] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [17] java.lang.reflect.Method.invoke
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.Executors$RunnableAdapter.call
+  [22] java.util.concurrent.FutureTask.run
+  [23] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [24] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [25] java.lang.Thread.run
+
+--- 10001409 ns (0.07%), 1 sample
+  [ 0] Monitor::lock(Thread*)
+  [ 1] ParallelScavengeHeap::mem_allocate(unsigned long, bool*)
+  [ 2] InstanceKlass::allocate_instance(Thread*)
+  [ 3] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10001023 ns (0.07%), 1 sample
+  [ 0] Method::validate_bci_from_bcx(long) const
+  [ 1] ObjectSampler::sample(HeapWord*, unsigned long, JavaThread*)
+  [ 2] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 3] InstanceKlass::allocate_instance(Thread*)
+  [ 4] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10000708 ns (0.07%), 1 sample
+  [ 0] HandleMark::initialize(Thread*)
+  [ 1] ThreadLocalAllocBuffer::clear_before_allocation()
+  [ 2] CollectedHeap::allocate_from_tlab_slow(KlassHandle, Thread*, unsigned long)
+  [ 3] InstanceKlass::allocate_objArray(int, int, Thread*)
+  [ 4] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap$Segment.createReferenceArray
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10000201 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 9999924 ns (0.07%), 1 sample
+  [ 0] RegionNode::Ideal(PhaseGVN*, bool)
+  [ 1] PhaseIterGVN::transform_old(Node*)
+  [ 2] PhaseIterGVN::optimize()
+  [ 3] Compile::Optimize()
+  [ 4] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 5] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 6] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 7] CompileBroker::compiler_thread_loop()
+  [ 8] JavaThread::thread_main_inner()
+  [ 9] JavaThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 9999560 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 9999374 ns (0.07%), 1 sample
+  [ 0] StorageHost<Adapter<JfrFlush>, StackObj>::StorageHost(JfrBuffer*, Thread*)
+  [ 1] AllocTracer::send_allocation_in_new_tlab_event(KlassHandle, HeapWord*, unsigned long, unsigned long, Thread*)
+  [ 2] InstanceKlass::allocate_instance(Thread*)
+  [ 3] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 9998045 ns (0.07%), 1 sample
+  [ 0] InstanceKlass::allocate_instance(Thread*)
+  [ 1] OptoRuntime::new_instance_C(Klass*, JavaThread*)
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  [ 3] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 4] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 6] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 7] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 8] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 9] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [10] sun.reflect.NativeMethodAccessorImpl.invoke
+  [11] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 9994954 ns (0.07%), 1 sample
+  [ 0] CollectedHeap::fill_with_object(HeapWord*, unsigned long, bool)
+  [ 1] ThreadLocalAllocBuffer::clear_before_allocation()
+  [ 2] CollectedHeap::allocate_from_tlab_slow(KlassHandle, Thread*, unsigned long)
+  [ 3] InstanceKlass::allocate_objArray(int, int, Thread*)
+  [ 4] OptoRuntime::new_array_C(Klass*, int, JavaThread*)
+  [ 5] org.springframework.util.ConcurrentReferenceHashMap$Segment.createReferenceArray
+  [ 6] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 7] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 8] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 9] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [10] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [11] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [12] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [13] sun.reflect.NativeMethodAccessorImpl.invoke
+  [14] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 9993341 ns (0.07%), 1 sample
+  [ 0] schedule_[k]
+  [ 1] sigsuspend_[k]
+  [ 2] __x64_sys_rt_sigsuspend_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __GI___sigsuspend
+  [ 6] __restore_rt
+  [ 7] [unknown]
+  [ 8] [not_walkable_Java]
+
+--- 9984365 ns (0.07%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 3] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 5] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 9977576 ns (0.06%), 1 sample
+  [ 0] org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  [ 1] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 2] org.springframework.util.ConcurrentReferenceHashMap.<init>
+  [ 3] com.tsypanov.benchmark.CRHMBenchmark.instantiate
+  [ 4] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_avgt_jmhStub
+  [ 5] com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest.instantiate_AverageTime
+  [ 6] sun.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] sun.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] sun.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+  4270110916   27.81%      427  org.springframework.util.ConcurrentReferenceHashMap$Segment.<init>
+  3920827445   25.53%      392  org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager.<init>
+  3691037002   24.04%      369  org.springframework.util.ConcurrentReferenceHashMap.createReferenceManager
+  1719959854   11.20%      172  org.springframework.util.ConcurrentReferenceHashMap.<init>
+   439959922    2.87%       44  java.lang.ref.ReferenceQueue.<init>
+   279927288    1.82%       28  java.util.concurrent.locks.ReentrantLock.<init>
+    70590822    0.46%        7  smp_call_function_single_[k]
+    60101429    0.39%        6  JfrStackTrace::record_safe(JavaThread*, int, bool)
+    60018394    0.39%        6  org.springframework.util.ConcurrentReferenceHashMap.calculateShift
+    50285061    0.33%        5  SpinPause
+    40081010    0.26%        4  StringTable::buckets_unlink_or_oops_do(BoolObjectClosure*, OopClosure*, int, int, BasicHashtable<(MemoryType)9>::BucketUnlinkContext*)
+    40009528    0.26%        4  org.openjdk.jmh.infra.Blackhole.consumeFull
+    30089406    0.20%        3  JfrStackTraceRepository::add_trace(JfrStackTrace const&)
+    30008583    0.20%        3  [unknown_Java]
+    20167520    0.13%        2  __GI___pthread_getspecific
+    20157599    0.13%        2  on_each_cpu_cond_mask_[k]
+    20152996    0.13%        2  flush_tlb_mm_range_[k]
+    20134389    0.13%        2  pthread_kill
+    20131890    0.13%        2  __malloc
+    20117113    0.13%        2  PSScavengeKlassClosure::do_klass(Klass*)
+    20093743    0.13%        2  CodeHeap::find_start(void*) const
+    20020149    0.13%        2  get_signal_[k]
+    19999683    0.13%        2  java.lang.reflect.Array.newInstance
+    10085072    0.07%        1  _raw_spin_lock_[k]
+    10077342    0.07%        1  Thread::is_Compiler_thread() const
+    10074795    0.07%        1  CardTableExtension::scavenge_contents_parallel(ObjectStartArray*, MutableSpace*, HeapWord*, PSPromotionManager*, unsigned int, unsigned int)
+    10073097    0.07%        1  x2apic_send_IPI_[k]
+    10072600    0.07%        1  JfrThreadSampler::task_stacktrace(JfrSampleType, JavaThread**) [clone .constprop.0]
+    10071227    0.07%        1  pthread_sigmask
+    10069648    0.07%        1  HandleMark::pop_and_restore()
+    10066995    0.07%        1  SimpleThresholdPolicy::compile(methodHandle, int, CompLevel, JavaThread*)
+    10066155    0.07%        1  JavaThread::is_Java_thread() const
+    10065568    0.07%        1  oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)
+    10065059    0.07%        1  do_mprotect_pkey_[k]
+    10064093    0.07%        1  do_send_sig_info_[k]
+    10064040    0.07%        1  java.lang.AbstractStringBuilder.append
+    10062951    0.07%        1  do_tkill_[k]
+    10062524    0.07%        1  pthread_mutex_lock
+    10061546    0.07%        1  ParallelTaskTerminator::offer_termination(TerminatorTerminator*)
+    10061344    0.07%        1  Monitor::ILock(Thread*)
+    10058605    0.07%        1  common_nsleep_[k]
+    10055236    0.07%        1  ParallelScavengeHeap::can_elide_tlab_store_barriers() const
+    10052887    0.07%        1  native signature handlers
+    10049128    0.07%        1  nmethod::find_pc_desc_internal(unsigned char*, bool)
+    10049119    0.07%        1  JfrEvent<EventJavaMonitorWait>::write_event()
+    10045264    0.07%        1  frame::oops_interpreted_do(OopClosure*, CLDClosure*, RegisterMap const*, bool)
+    10043144    0.07%        1  __pthread_mutex_unlock
+    10040241    0.07%        1  ClassLoaderData::ChunkedHandleList::oops_do(OopClosure*)
+    10039798    0.07%        1  ciMethod::ciMethod(methodHandle, ciInstanceKlass*)
+    10038422    0.07%        1  PhaseChaitin::interfere_with_live(unsigned int, IndexSet*)
+    10036358    0.07%        1  vma_merge_[k]
+    10035126    0.07%        1  os::PlatformEvent::park()
+    10032834    0.07%        1  __strchrnul_avx2
+    10031856    0.07%        1  __handle_mm_fault_[k]
+    10023682    0.07%        1  Compile::Output()
+    10019005    0.07%        1  SafepointSynchronize::end()
+    10018606    0.07%        1  Parse::do_one_bytecode()
+    10015589    0.07%        1  do_user_addr_fault_[k]
+    10013833    0.07%        1  ObjectSampler::add(HeapWord*, unsigned long, unsigned long, JfrStackTrace*, JavaThread*)
+    10006959    0.07%        1  frame::interpreter_frame_method() const
+    10004400    0.07%        1  MachOper::num_edges() const
+    10003536    0.07%        1  __lock_text_start_[k]
+    10001409    0.07%        1  Monitor::lock(Thread*)
+    10001023    0.07%        1  Method::validate_bci_from_bcx(long) const
+    10000708    0.07%        1  HandleMark::initialize(Thread*)
+     9999924    0.07%        1  RegionNode::Ideal(PhaseGVN*, bool)
+     9999374    0.07%        1  StorageHost<Adapter<JfrFlush>, StackObj>::StorageHost(JfrBuffer*, Thread*)
+     9998045    0.07%        1  InstanceKlass::allocate_instance(Thread*)
+     9994954    0.07%        1  CollectedHeap::fill_with_object(HeapWord*, unsigned long, bool)
+     9993341    0.07%        1  schedule_[k]

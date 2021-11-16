@@ -1,0 +1,395 @@
+# JMH version: 1.33
+# VM version: JDK 1.8.0_292, OpenJDK 64-Bit Server VM, 25.292-b10
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly
+# Blackhole mode: full + dont-inline hint (default, use -Djmh.blackhole.autoDetect=true to auto-detect)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 1 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.tsypanov.benchmark.CRHMBenchmark.instantiate
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1156.039 ns/op
+# Warmup Iteration   2: 657.986 ns/op
+# Warmup Iteration   3: 640.315 ns/op
+# Warmup Iteration   4: 639.539 ns/op
+# Warmup Iteration   5: 645.242 ns/op
+Iteration   1: 644.561 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "com.tsypanov.benchmark.CRHMBenchmark.instantiate":
+  644.561 ns/op
+
+Secondary result "com.tsypanov.benchmark.CRHMBenchmark.instantiate:·asm":
+PrintAssembly processed: 141428 total address lines.
+Perf output processed (skipped 12.096 seconds):
+ Column 1: cycles (937 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+C2, level 4, org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (569 bytes) 
+
+            0x00007f3451228079: vcvttss2si %xmm0,%r10d
+  0.96%     0x00007f345122807d: cmp     $0x80000000,%r10d
+         ╭  0x00007f3451228084: jne     0x7f3451228096
+         │  0x00007f3451228086: sub     $0x8,%rsp
+         │  0x00007f345122808a: vmovss  %xmm0,(%rsp)
+         │  0x00007f345122808f: callq   0x7f34510520a0    ;   {runtime_call}
+         │  0x00007f3451228094: pop     %r10
+         ↘  0x00007f3451228096: mov     %r10d,0x18(%rbp)  ;*synchronization entry
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@-1 (line 171)
+            0x00007f345122809a: mov     0x58(%rsp),%r11
+  0.85%     0x00007f345122809f: mov     0xc(%r11),%r10d   ; implicit exception: dispatches to 0x00007f34512287d1
+            0x00007f34512280a3: mov     0x90(%rsp),%ebp
+            0x00007f34512280aa: cmp     %r10d,%ebp
+            0x00007f34512280ad: jnb     0x7f345122866d
+            0x00007f34512280b3: lea     0x10(%r11,%rbp,4),%r9  ;*aastore
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@144 (line 184)
+  0.64%     0x00007f34512280b8: mov     0x28(%rsp),%r10
+            0x00007f34512280bd: mov     0x1c(%r10),%r11d  ;*getfield segments
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@121 (line 183)
+            0x00007f34512280c1: mov     %r9,%r10
+            0x00007f34512280c4: incl    %ebp              ;*iinc
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@145 (line 183)
+  0.75%     0x00007f34512280c6: shr     $0x9,%r10
+  0.11%     0x00007f34512280ca: movabs  $0x7f3466c47000,%rcx
+            0x00007f34512280d4: mov     %r12l,(%rcx,%r10)
+            0x00007f34512280d8: mov     %r8d,(%r9)        ; OopMap{r11=NarrowOop [0]=NarrowOop [40]=Oop off=859}
+                                                          ;*goto
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@148 (line 183)
+  0.75%     0x00007f34512280db: test    %eax,0x17e33f1f(%rip)  ;*goto
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@148 (line 183)
+                                                          ;   {poll}
+            0x00007f34512280e1: mov     0xc(%r11),%r10d   ; implicit exception: dispatches to 0x00007f34512287ed
+            0x00007f34512280e5: cmp     %r10d,%ebp
+            0x00007f34512280e8: jnl     0x7f3451228313    ;*if_icmpge
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@125 (line 183)
+            0x00007f34512280ee: mov     %r11,%r13         ;*getfield segments
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@121 (line 183)
+  0.11%     0x00007f34512280f1: mov     0x8(%rsp),%r8d
+            0x00007f34512280f6: mov     (%rsp),%edi
+  3.09%     0x00007f34512280f9: mov     0x18(%rsp),%r14
+            0x00007f34512280fe: mov     0x20(%rsp),%r11
+            0x00007f3451228103: mov     0x30(%rsp),%r9
+            0x00007f3451228108: mov     0x38(%rsp),%rsi   ;*aload_0
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@128 (line 184)
+  0.96%     0x00007f345122810d: mov     0x60(%r15),%rbx
+            0x00007f3451228111: mov     %rbx,%r10
+            0x00007f3451228114: add     $0x28,%r10
+            0x00007f3451228118: cmp     0x70(%r15),%r10
+            0x00007f345122811c: jnb     0x7f3451228322
+  0.64%     0x00007f3451228122: mov     %r10,0x60(%r15)
+            0x00007f3451228126: prefetchnta 0x100(%r10)
+            0x00007f345122812e: mov     0xa8(%r11),%r10
+            0x00007f3451228135: mov     %r10,(%rbx)
+  0.43%     0x00007f3451228138: movl    $0x2001959f,0x8(%rbx)  ;   {metadata(&apos;org/springframework/util/ConcurrentReferenceHashMap$Segment&apos;)}
+            0x00007f345122813f: mov     %r12d,0xc(%rbx)
+            0x00007f3451228143: mov     %r12,0x10(%rbx)
+  0.11%     0x00007f3451228147: mov     %r12,0x18(%rbx)
+  0.53%     0x00007f345122814b: mov     %r12d,0x20(%rbx)
+            0x00007f345122814f: mov     %edi,0x24(%rbx)   ;*new  ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@134 (line 184)
+            0x00007f3451228152: mov     0x60(%r15),%rax
+            0x00007f3451228156: mov     %rax,%r10
+  0.11%     0x00007f3451228159: add     $0x20,%r10
+            0x00007f345122815d: cmp     0x70(%r15),%r10
+            0x00007f3451228161: jnb     0x7f34512283a8
+  0.11%     0x00007f3451228167: mov     %r10,0x60(%r15)
+  0.11%     0x00007f345122816b: prefetchnta 0x100(%r10)
+  0.32%     0x00007f3451228173: mov     0xa8(%r14),%r10
+            0x00007f345122817a: mov     %r10,(%rax)
+            0x00007f345122817d: movl    $0x2001833d,0x8(%rax)  ;   {metadata(&apos;java/util/concurrent/locks/ReentrantLock$NonfairSync&apos;)}
+  0.11%     0x00007f3451228184: mov     %r12d,0xc(%rax)
+  0.53%     0x00007f3451228188: mov     %r12,0x10(%rax)
+  0.11%     0x00007f345122818c: mov     %r12,0x18(%rax)   ;*new  ; - java.util.concurrent.locks.ReentrantLock::&lt;init&gt;@5 (line 257)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@6 (line 484)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451228190: mov     %rbx,%rcx
+            0x00007f3451228193: mov     %rax,%r10
+  0.43%     0x00007f3451228196: mov     %r10d,0xc(%rbx)
+            0x00007f345122819a: shr     $0x9,%rcx
+            0x00007f345122819e: movabs  $0x7f3466c47000,%r10
+            0x00007f34512281a8: mov     %r12l,(%r10,%rcx)
+  0.43%     0x00007f34512281ac: mov     %r12d,0x14(%rbx)
+  0.11%     0x00007f34512281b0: lock addl $0x0,(%rsp)     ;*putfield count
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@11 (line 476)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+ 15.90%     0x00007f34512281b5: mov     0x60(%r15),%rdx
+            0x00007f34512281b9: mov     %rdx,%r10
+            0x00007f34512281bc: add     $0x18,%r10
+  0.75%     0x00007f34512281c0: cmp     0x70(%r15),%r10
+            0x00007f34512281c4: jnb     0x7f3451228436
+            0x00007f34512281ca: mov     %r10,0x60(%r15)
+            0x00007f34512281ce: prefetchnta 0x100(%r10)
+            0x00007f34512281d6: mov     0xa8(%rsi),%r10
+  0.85%     0x00007f34512281dd: mov     %r10,(%rdx)
+            0x00007f34512281e0: movl    $0x200196b2,0x8(%rdx)  ;   {metadata(&apos;org/springframework/util/ConcurrentReferenceHashMap$ReferenceManager&apos;)}
+            0x00007f34512281e7: mov     %r12d,0xc(%rdx)
+            0x00007f34512281eb: mov     %r12d,0x14(%rdx)
+  0.21%     0x00007f34512281ef: mov     %r13,0x58(%rsp)
+            0x00007f34512281f4: mov     %ebp,0x90(%rsp)
+            0x00007f34512281fb: mov     %edi,0x10(%rdx)   ;*new  ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@0 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f34512281fe: mov     0x60(%r15),%rbp
+  0.75%     0x00007f3451228202: mov     %rbp,%r10
+            0x00007f3451228205: add     $0x20,%r10
+            0x00007f3451228209: cmp     0x70(%r15),%r10
+            0x00007f345122820d: jnb     0x7f34512284c7
+            0x00007f3451228213: mov     %r10,0x60(%r15)
+  0.75%     0x00007f3451228217: prefetchnta 0x100(%r10)
+            0x00007f345122821f: mov     0xa8(%r9),%r10
+            0x00007f3451228226: mov     %r10,0x0(%rbp)
+            0x00007f345122822a: movl    $0x20000d06,0x8(%rbp)  ;   {metadata(&apos;java/lang/ref/ReferenceQueue&apos;)}
+  0.32%     0x00007f3451228231: mov     %r12d,0xc(%rbp)
+            0x00007f3451228235: mov     %r12,0x10(%rbp)
+            0x00007f3451228239: mov     %r12,0x18(%rbp)   ;*new  ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@10 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f345122823d: mov     0x60(%r15),%rax
+  0.75%     0x00007f3451228241: mov     %rax,%r10
+            0x00007f3451228244: add     $0x10,%r10
+  0.11%     0x00007f3451228248: cmp     0x70(%r15),%r10
+            0x00007f345122824c: jnb     0x7f345122855d
+            0x00007f3451228252: mov     %r10,0x60(%r15)
+  0.53%     0x00007f3451228256: prefetchnta 0x100(%r10)
+            0x00007f345122825e: mov     0x10(%rsp),%r10
+            0x00007f3451228263: mov     0xa8(%r10),%r10
+            0x00007f345122826a: mov     %r10,(%rax)
+  0.11%     0x00007f345122826d: movl    $0x200034f1,0x8(%rax)  ;   {metadata(&apos;java/lang/ref/ReferenceQueue$Lock&apos;)}
+  0.11%     0x00007f3451228274: mov     %r12d,0xc(%rax)   ;*new  ; - java.lang.ref.ReferenceQueue::&lt;init&gt;@5 (line 55)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@14 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451228278: mov     %rbp,%r10         ;*putfield queue
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@17 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f345122827b: mov     %rax,%rcx
+  0.64%     0x00007f345122827e: mov     %ecx,0xc(%rbp)    ;*putfield lock
+                                                          ; - java.lang.ref.ReferenceQueue::&lt;init&gt;@13 (line 55)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@14 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451228281: mov     %rbp,%rax
+            0x00007f3451228284: mov     %rdx,%rcx         ;*putfield referenceManager
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@19 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451228287: shr     $0x9,%rax
+  0.32%     0x00007f345122828b: movabs  $0x7f3466c47000,%r13
+            0x00007f3451228295: mov     %r12l,0x0(%r13,%rax)
+            0x00007f345122829a: mov     %r12d,0x18(%rbp)
+            0x00007f345122829e: lock addl $0x0,(%rsp)     ;*putfield head
+                                                          ; - java.lang.ref.ReferenceQueue::&lt;init&gt;@18 (line 56)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@14 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+ 16.44%     0x00007f34512282a3: mov     %r10d,0xc(%rdx)   ;*putfield queue
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@17 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+  0.11%     0x00007f34512282a7: mov     %r12,0x10(%rbp)   ;*putfield queueLength
+                                                          ; - java.lang.ref.ReferenceQueue::&lt;init&gt;@23 (line 57)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$ReferenceManager::&lt;init&gt;@14 (line 984)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@5 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f34512282ab: mov     %rdx,%r10
+  0.32%     0x00007f34512282ae: shr     $0x9,%r10
+            0x00007f34512282b2: movabs  $0x7f3466c47000,%rdx
+            0x00007f34512282bc: mov     %r12l,(%rdx,%r10)  ;*synchronization entry
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::createReferenceManager@-1 (line 207)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@16 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f34512282c0: mov     %ecx,0x1c(%rbx)
+  0.85%     0x00007f34512282c3: mov     %rbx,%r10
+            0x00007f34512282c6: shr     $0x9,%r10
+            0x00007f34512282ca: movabs  $0x7f3466c47000,%rcx
+            0x00007f34512282d4: mov     %r12l,(%rcx,%r10)  ;*putfield referenceManager
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@19 (line 485)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+  0.75%     0x00007f34512282d8: cmp     $0x1,%r8d
+            0x00007f34512282dc: jle     0x7f3451227f90    ;*goto
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::calculateShift@21 (line 437)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@27 (line 486)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f34512282e2: mov     $0x1,%r10d
+            0x00007f34512282e8: xor     %ecx,%ecx         ;*iload_3
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::calculateShift@9 (line 435)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@27 (line 486)
+....................................................................................................
+ 51.87%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+C2, level 4, org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (217 bytes) 
+
+            0x00007f3451227f8b: jmpq    0x7f345122810d
+            0x00007f3451227f90: mov     $0x1,%edx         ;*ishl
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@30 (line 486)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451227f95: cmp     $0x40000,%edx
+            0x00007f3451227f9b: jnbe    0x7f3451228665
+            0x00007f3451227fa1: movsxd  %edx,%rcx         ;*anewarray
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::createReferenceArray@1 (line 656)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@40 (line 487)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+  0.53%     0x00007f3451227fa4: mov     %edx,0x10(%rbx)   ;*putfield initialSize
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@31 (line 486)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+            0x00007f3451227fa7: cmp     $0x40000,%edx
+            0x00007f3451227fad: jnbe    0x7f34512285e7
+            0x00007f3451227fb3: mov     %rbx,%rbp
+            0x00007f3451227fb6: mov     %rsi,0x38(%rsp)
+  0.53%     0x00007f3451227fbb: mov     %r9,0x30(%rsp)
+            0x00007f3451227fc0: mov     %r11,0x20(%rsp)
+            0x00007f3451227fc5: mov     %r14,0x18(%rsp)
+            0x00007f3451227fca: mov     %edi,(%rsp)
+  0.43%     0x00007f3451227fcd: mov     %r8d,0x8(%rsp)
+            0x00007f3451227fd2: mov     0x60(%r15),%r10
+            0x00007f3451227fd6: shl     $0x2,%rcx
+            0x00007f3451227fda: add     $0x17,%rcx
+  0.32%     0x00007f3451227fde: mov     %rcx,%r11
+            0x00007f3451227fe1: and     $0xfffffffffffffff8,%r11
+            0x00007f3451227fe5: mov     %r10,%r8
+            0x00007f3451227fe8: add     %r11,%r8
+  0.53%     0x00007f3451227feb: cmp     0x70(%r15),%r8
+            0x00007f3451227fef: jnb     0x7f3451228606
+            0x00007f3451227ff5: mov     %r8,0x60(%r15)
+            0x00007f3451227ff9: prefetchnta 0x100(%r8)
+            0x00007f3451228001: movq    $0x1,(%r10)
+  0.85%     0x00007f3451228008: prefetchnta 0x140(%r8)
+            0x00007f3451228010: movl    $0x20019730,0x8(%r10)  ;   {metadata(&apos;org/springframework/util/ConcurrentReferenceHashMap$Reference&apos;[])}
+            0x00007f3451228018: mov     %edx,0xc(%r10)
+            0x00007f345122801c: prefetchnta 0x180(%r8)
+  0.64%     0x00007f3451228024: mov     %r10,%rdi
+            0x00007f3451228027: add     $0x10,%rdi
+            0x00007f345122802b: shr     $0x3,%rcx
+            0x00007f345122802f: add     $0xfffffffffffffffe,%rcx
+  0.53%     0x00007f3451228033: xor     %rax,%rax
+            0x00007f3451228036: shl     $0x3,%rcx
+            0x00007f345122803a: rep stosb (%rdi)
+  8.32%     0x00007f345122803d: mov     %r10,%r11
+  0.43%     0x00007f3451228040: mov     %rbp,%r8
+            0x00007f3451228043: mov     %r11d,0x20(%rbp)
+  0.43%     0x00007f3451228047: mov     %rbp,%r10
+            0x00007f345122804a: shr     $0x9,%r10
+            0x00007f345122804e: movabs  $0x7f3466c47000,%r11
+            0x00007f3451228058: mov     %r12l,(%r11,%r10)
+  0.43%     0x00007f345122805c: lock addl $0x0,(%rsp)     ;*putfield references
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@43 (line 487)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+ 11.42%     0x00007f3451228061: mov     0x20(%rbp),%r10d  ;*getfield references
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@48 (line 488)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+  0.11%     0x00007f3451228065: mov     0xc(%r10),%r11d   ;*arraylength
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap$Segment::&lt;init&gt;@51 (line 488)
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@141 (line 184)
+                                                          ; implicit exception: dispatches to 0x00007f34512287c1
+            0x00007f3451228069: vcvtsi2ssl %r11d,%xmm1,%xmm1
+  0.75%     0x00007f345122806e: mov     0x28(%rsp),%r10
+            0x00007f3451228073: vmulss  0x14(%r10),%xmm1,%xmm0
+            0x00007f3451228079: vcvttss2si %xmm0,%r10d
+  0.96%     0x00007f345122807d: cmp     $0x80000000,%r10d
+         ╭  0x00007f3451228084: jne     0x7f3451228096
+         │  0x00007f3451228086: sub     $0x8,%rsp
+         │  0x00007f345122808a: vmovss  %xmm0,(%rsp)
+         │  0x00007f345122808f: callq   0x7f34510520a0    ;   {runtime_call}
+         │  0x00007f3451228094: pop     %r10
+         ↘  0x00007f3451228096: mov     %r10d,0x18(%rbp)  ;*synchronization entry
+                                                          ; - org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;@-1 (line 171)
+            0x00007f345122809a: mov     0x58(%rsp),%r11
+  0.85%     0x00007f345122809f: mov     0xc(%r11),%r10d   ; implicit exception: dispatches to 0x00007f34512287d1
+            0x00007f34512280a3: mov     0x90(%rsp),%ebp
+....................................................................................................
+ 27.21%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 51.87%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (569 bytes) 
+ 27.21%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (217 bytes) 
+  1.71%   [kernel.kallsyms]  native_write_msr (0 bytes) 
+  0.75%   [kernel.kallsyms]  entry_SYSCALL_64 (11 bytes) 
+  0.75%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (31 bytes) 
+  0.64%   [kernel.kallsyms]  zap_pte_range.isra.0 (0 bytes) 
+  0.53%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (0 bytes) 
+  0.43%   [kernel.kallsyms]  free_pcppages_bulk (7 bytes) 
+  0.43%   [kernel.kallsyms]  syscall_exit_to_user_mode (0 bytes) 
+  0.43%         C2, level 4  com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest::instantiate_avgt_jmhStub, version 565 (0 bytes) 
+  0.43%           libjvm.so  StringTable::buckets_unlink_or_oops_do (0 bytes) 
+  0.32%   [kernel.kallsyms]  release_pages (17 bytes) 
+  0.32%   [kernel.kallsyms]  __mod_node_page_state (13 bytes) 
+  0.32%   [kernel.kallsyms]  __mod_lruvec_page_state (29 bytes) 
+  0.32%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (0 bytes) 
+  0.32%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 (28 bytes) 
+  0.32%         C2, level 4  com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest::instantiate_avgt_jmhStub, version 565 (24 bytes) 
+  0.32%           libjvm.so  fileStream::write (28 bytes) 
+  0.32%           libjvm.so  ParallelTaskTerminator::offer_termination (0 bytes) 
+  0.32%        libc-2.31.so  malloc (0 bytes) 
+ 11.85%  <...other 100 warm regions...>
+....................................................................................................
+ 99.89%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 81.54%         C2, level 4  org.springframework.util.ConcurrentReferenceHashMap::&lt;init&gt;, version 536 
+  1.71%   [kernel.kallsyms]  native_write_msr 
+  0.75%   [kernel.kallsyms]  free_pcppages_bulk 
+  0.75%         C2, level 4  com.tsypanov.benchmark.jmh_generated.CRHMBenchmark_instantiate_jmhTest::instantiate_avgt_jmhStub, version 565 
+  0.75%   [kernel.kallsyms]  entry_SYSCALL_64 
+  0.75%   [kernel.kallsyms]  zap_pte_range.isra.0 
+  0.75%   [kernel.kallsyms]  release_pages 
+  0.64%        libc-2.31.so  malloc 
+  0.53%        libc-2.31.so  _int_malloc 
+  0.53%        libc-2.31.so  _int_free 
+  0.43%   [kernel.kallsyms]  syscall_exit_to_user_mode 
+  0.43%   [kernel.kallsyms]  __mod_node_page_state 
+  0.43%           libjvm.so  StringTable::buckets_unlink_or_oops_do 
+  0.32%           libjvm.so  ParallelTaskTerminator::offer_termination 
+  0.32%           libjvm.so  fileStream::write 
+  0.32%   [kernel.kallsyms]  __mod_lruvec_page_state 
+  0.32%        libc-2.31.so  malloc_consolidate 
+  0.21%         C2, level 4  org.openjdk.jmh.infra.Blackhole::consumeFull, version 542 
+  0.21%   [kernel.kallsyms]  free_pages_and_swap_cache 
+  0.21%   [kernel.kallsyms]  finish_task_switch 
+  8.00%  <...other 70 warm methods...>
+....................................................................................................
+ 99.89%  <totals>
+
+....[Distribution by Source]........................................................................
+ 82.50%         C2, level 4
+  9.82%   [kernel.kallsyms]
+  3.52%           libjvm.so
+  2.99%        libc-2.31.so
+  0.75%    libfcml.so.0.0.0
+  0.21%         interpreter
+  0.11%  libpthread-2.31.so
+....................................................................................................
+ 99.89%  <totals>
+
+WARNING: The perf event count is suspiciously low (937). The performance data might be
+inaccurate or misleading. Try to do the profiling again, or tune up the sampling frequency.
+With some profilers on Mac OS X, System Integrity Protection (SIP) may prevent profiling.
+In such case, temporarily disabling SIP with 'csrutil disable' might help.
+
+
+# Run complete. Total time: 00:00:15
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                       Mode  Cnt    Score   Error  Units
+CRHMBenchmark.instantiate       avgt       644.561          ns/op
+CRHMBenchmark.instantiate:·asm  avgt           NaN            ---
