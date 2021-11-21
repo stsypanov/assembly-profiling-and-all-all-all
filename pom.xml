@@ -14,7 +14,7 @@
 
 	<properties>
 		<jmh.version>1.33</jmh.version>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 		<uberjar.name>benchmarks</uberjar.name>
 		<spring-boot-version>2.1.1.RELEASE</spring-boot-version>
 	</properties>
