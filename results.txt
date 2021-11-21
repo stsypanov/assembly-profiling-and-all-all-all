@@ -1,0 +1,32 @@
+JDK 8, Spring Boot 2.1.1.RELEASE
+                                                        (count)  Mode  Cnt       Score       Error   Units
+findAllByName                                                 1  avgt   30      17.276 ±     0.238   us/op
+findAllByName:·gc.alloc.rate.norm                             1  avgt   30   21194.878 ±    17.459    B/op
+findAllByNameUsingDto                                         1  avgt   30      14.045 ±     0.178   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                     1  avgt   30   14028.866 ±    10.251    B/op
+findAllByName                                               100  avgt   30     216.975 ±     0.476   us/op
+findAllByName:·gc.alloc.rate.norm                           100  avgt   30  509968.538 ±   997.044    B/op
+findAllByNameUsingDto                                       100  avgt   30      45.632 ±     0.716   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                   100  avgt   30   33271.588 ±    11.743    B/op
+
+JDK 8, Spring Boot 2.3.11.RELEASE
+                                                        (count)  Mode  Cnt       Score       Error   Units
+findAllByName                                                 1  avgt   40      10.318 ±     0.229   us/op
+findAllByName:·gc.alloc.rate.norm                             1  avgt   40   15255.009 ±    34.489    B/op
+findAllByNameUsingDto                                         1  avgt   40       5.886 ±     0.320   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                     1  avgt   40    6329.630 ±    29.194    B/op
+findAllByName                                               100  avgt   40     199.630 ±     0.558   us/op
+findAllByName:·gc.alloc.rate.norm                           100  avgt   40  526448.991 ±   768.354    B/op
+findAllByNameUsingDto                                       100  avgt   40      35.028 ±     0.238   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                   100  avgt   40   25607.657 ±    16.024    B/op
+
+JDK 11, Spring Boot 2.3.11.RELEASE
+                                                        (count)  Mode  Cnt       Score       Error   Units
+findAllByName                                                 1  avgt   40      10.146 ±     0.079   us/op
+findAllByName:·gc.alloc.rate.norm                             1  avgt   40   13322.132 ±    12.555    B/op
+findAllByNameUsingDto                                         1  avgt   40       6.275 ±     0.122   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                     1  avgt   40    5871.755 ±    21.682    B/op
+findAllByName                                               100  avgt   40     180.818 ±     0.819   us/op
+findAllByName:·gc.alloc.rate.norm                           100  avgt   40  500650.010 ±    16.500    B/op
+findAllByNameUsingDto                                       100  avgt   40      31.027 ±     0.575   us/op
+findAllByNameUsingDto:·gc.alloc.rate.norm                   100  avgt   40   25108.025 ±    21.045    B/op
