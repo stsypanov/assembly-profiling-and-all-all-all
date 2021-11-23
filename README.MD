@@ -9,18 +9,18 @@
 1. Постановка задачи. Запуск `ProjectionVsDtoBenchmark` показывает существенную разницу в производительности
    между выгрузкой данных с помощью DTO и проекций:
 ```
-Benchmark                                            (count)  Mode  Cnt       Score       Error   Units
-findAllByName                                              1  avgt   50      12,886 ±     0,194   us/op
-findAllByNameUsingDto                                      1  avgt   50      11,409 ±     0,741   us/op
+Benchmark                          (count)  Mode  Cnt       Score       Error   Units
+dto                                      1  avgt   50      11,409 ±     0,741   us/op
+projection                               1  avgt   50      12,886 ±     0,194   us/op
 
-findAllByName                                            100  avgt   50     220,189 ±     5,668   us/op
-findAllByNameUsingDto                                    100  avgt   50      40,326 ±     0,738   us/op
+dto                                    100  avgt   50      40,326 ±     0,738   us/op
+projection                             100  avgt   50     220,189 ±     5,668   us/op
 
-findAllByName:·gc.alloc.rate.norm                          1  avgt   50   21224,235 ±    19,369    B/op
-findAllByNameUsingDto:·gc.alloc.rate.norm                  1  avgt   50   13994,528 ±    22,042    B/op
+dto:·gc.alloc.rate.norm                  1  avgt   50   13994,528 ±    22,042    B/op
+projection:·gc.alloc.rate.norm           1  avgt   50   21224,235 ±    19,369    B/op
 
-findAllByName:·gc.alloc.rate.norm                        100  avgt   50  517354,738 ±    34,719    B/op
-findAllByNameUsingDto:·gc.alloc.rate.norm                100  avgt   50   33313,019 ±    22,609    B/op
+dto:·gc.alloc.rate.norm                100  avgt   50   33313,019 ±    22,609    B/op
+projection:·gc.alloc.rate.norm         100  avgt   50  517354,738 ±    34,719    B/op
 ```
 
 2. Запуск теста `ManyFieldsRepositoryTest` с остановкой на бряке в последней строчке

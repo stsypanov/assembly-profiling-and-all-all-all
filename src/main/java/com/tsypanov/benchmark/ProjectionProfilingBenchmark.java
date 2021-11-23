@@ -34,7 +34,7 @@ public class ProjectionProfilingBenchmark {
 	}
 
 	@Benchmark
-	public Collection<HasIdAndName> findAllByName() {
+	public Collection<HasIdAndName> projection() {
 		return repository.findAllByName("ivan");
 	}
 

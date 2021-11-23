@@ -40,12 +40,12 @@ public class ProjectionVsDtoBenchmark {
 	}
 
 	@Benchmark
-	public Collection<HasIdAndName> findAllByNameUsingDto() {
+	public Collection<HasIdAndName> dto() {
 		return repository.findAllByNameUsingDto("ivan");
 	}
 
 	@Benchmark
-	public Collection<HasIdAndName> findAllByName() {
+	public Collection<HasIdAndName> projection() {
 		return repository.findAllByName("ivan");
 	}
 
