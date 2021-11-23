@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @BenchmarkMode(value = Mode.AverageTime)
-public class VolatileFieldBenchmark  {
+public class VolatileFieldZeroingBenchmark {
 
   @Benchmark
   public Object explicitInit() {

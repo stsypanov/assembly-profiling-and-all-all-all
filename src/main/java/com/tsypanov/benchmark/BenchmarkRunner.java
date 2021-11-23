@@ -14,7 +14,7 @@ public class BenchmarkRunner {
           .include(ProjectionVsDtoBenchmark.class.getSimpleName())
 //				.include(ProjectionProfilingBenchmark.class.getSimpleName())
 //				.include(CRHMBenchmark.class.getSimpleName())
-//				.include(VolatileFieldBenchmark.class.getSimpleName())
+//				.include(VolatileFieldZeroingBenchmark.class.getSimpleName())
 //				.include(AtomicZeroingBenchmark.class.getSimpleName())
 //				.include(TurnOffInliningBenchmark.class.getSimpleName())
             .warmupIterations(10)
