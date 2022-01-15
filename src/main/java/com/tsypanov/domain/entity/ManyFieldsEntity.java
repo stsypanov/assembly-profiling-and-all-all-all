@@ -15,7 +15,7 @@ public class ManyFieldsEntity {
   private Long id;
 
   @Column
-  private String extid;
+  private String extId;
 
   @Column
   private String name;
@@ -44,9 +44,9 @@ public class ManyFieldsEntity {
   @Column
   private BigDecimal amount8;
 
-  public ManyFieldsEntity(Long id, String extid, String name) {
+  public ManyFieldsEntity(Long id, String extId, String name) {
     this.id = id;
-    this.extid = extid;
+    this.extId = extId;
     this.name = name;
   }
 
