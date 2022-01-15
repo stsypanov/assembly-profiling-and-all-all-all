@@ -25,8 +25,8 @@ public class TurnOffInliningBenchmark {
 
   private Integer calculate(int length) {
     Integer sum = 0;
-    for (int i = 0; i <length; i++) {
-      sum +=i;
+    for (int i = 0; i < length; i++) {
+      sum += i;
     }
     return sum;
   }

@@ -12,20 +12,20 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @SpringBootTest(classes = Application.class)
 class ManyFieldsRepositoryTest {
-	
-	@Autowired
-	private ManyFieldsRepository repository;
 
-	@BeforeEach
-	void setUp() {
-		repository.save(new ManyFieldsEntity(1L, "1", "ivan"));
-	}
+  @Autowired
+  private ManyFieldsRepository repository;
 
-	@Test
-	void findAllByName() {
-		HasIdAndName dto = repository.findAllByNameUsingDto("ivan").iterator().next();
+  @BeforeEach
+  void setUp() {
+    repository.save(new ManyFieldsEntity(1L, "1", "ivan"));
+  }
 
-		HasIdAndName projection = repository.findAllByName("ivan").iterator().next();
-	}
+  @Test
+  void findAllByName() {
+    HasIdAndName dto = repository.findAllByNameUsingDto("ivan").iterator().next();
+
+    HasIdAndName projection = repository.findAllByName("ivan").iterator().next();
+  }
 
 }

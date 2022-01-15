@@ -18,24 +18,24 @@ import java.util.stream.Collectors;
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @BenchmarkMode(value = Mode.AverageTime)
 public class ProjectionProfilingBenchmark {
-	private ManyFieldsRepository repository;
+  private ManyFieldsRepository repository;
 
-	@Setup
-	public void init() {
-		ApplicationContext context = SpringApplication.run(Application.class);
-		repository = context.getBean(ManyFieldsRepository.class);
-		List<ManyFieldsEntity> entities = ThreadLocalRandom.current()
-				.longs(100)
-				.boxed()
-				.map(randomLong -> new ManyFieldsEntity(randomLong, String.valueOf(randomLong), "ivan"))
-				.collect(Collectors.toList());
+  @Setup
+  public void init() {
+    ApplicationContext context = SpringApplication.run(Application.class);
+    repository = context.getBean(ManyFieldsRepository.class);
+    List<ManyFieldsEntity> entities = ThreadLocalRandom.current()
+        .longs(100)
+        .boxed()
+        .map(randomLong -> new ManyFieldsEntity(randomLong, String.valueOf(randomLong), "ivan"))
+        .collect(Collectors.toList());
 
-		repository.saveAll(entities);
-	}
+    repository.saveAll(entities);
+  }
 
-	@Benchmark
-	public Collection<HasIdAndName> projection() {
-		return repository.findAllByName("ivan");
-	}
+  @Benchmark
+  public Collection<HasIdAndName> projection() {
+    return repository.findAllByName("ivan");
+  }
 
 }

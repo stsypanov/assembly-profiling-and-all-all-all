@@ -10,46 +10,46 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 public class ManyFieldsEntity {
-	
-	@Id
-	private Long id;
-	
-	@Column
-	private String extid;
 
-	@Column
-	private String name;
-	
-	@Column
-	private BigDecimal amount1;
+  @Id
+  private Long id;
 
-	@Column
-	private BigDecimal amount2;
+  @Column
+  private String extid;
 
-	@Column
-	private BigDecimal amount3;
+  @Column
+  private String name;
 
-	@Column
-	private BigDecimal amount4;
+  @Column
+  private BigDecimal amount1;
 
-	@Column
-	private BigDecimal amount5;
+  @Column
+  private BigDecimal amount2;
 
-	@Column
-	private BigDecimal amount6;
+  @Column
+  private BigDecimal amount3;
 
-	@Column
-	private BigDecimal amount7;
+  @Column
+  private BigDecimal amount4;
 
-	@Column
-	private BigDecimal amount8;
+  @Column
+  private BigDecimal amount5;
 
-	public ManyFieldsEntity(Long id, String extid, String name) {
-		this.id = id;
-		this.extid = extid;
-		this.name = name;
-	}
+  @Column
+  private BigDecimal amount6;
 
-	public ManyFieldsEntity() {
-	}
+  @Column
+  private BigDecimal amount7;
+
+  @Column
+  private BigDecimal amount8;
+
+  public ManyFieldsEntity(Long id, String extid, String name) {
+    this.id = id;
+    this.extid = extid;
+    this.name = name;
+  }
+
+  public ManyFieldsEntity() {
+  }
 }

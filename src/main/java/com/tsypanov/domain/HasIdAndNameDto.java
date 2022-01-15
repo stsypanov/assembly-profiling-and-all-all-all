@@ -6,8 +6,8 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public class HasIdAndNameDto implements HasIdAndName {
-	
-	private final Long id;
-	private final String name;
+
+  private final Long id;
+  private final String name;
 
 }

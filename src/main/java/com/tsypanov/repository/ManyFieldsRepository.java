@@ -10,11 +10,11 @@ import java.util.Collection;
 
 public interface ManyFieldsRepository extends JpaRepository<ManyFieldsEntity, Long> {
 
-	Collection<HasIdAndName> findAllByName(String name);
+  Collection<HasIdAndName> findAllByName(String name);
 
-	@Query("select new com.tsypanov.domain.HasIdAndNameDto(e.id, e.name)" +
-			" from ManyFieldsEntity e " +
-			"where e.name = :name")
-	Collection<HasIdAndName> findAllByNameUsingDto(@Param("name") String name);
-	
+  @Query("select new com.tsypanov.domain.HasIdAndNameDto(e.id, e.name)" +
+      " from ManyFieldsEntity e " +
+      "where e.name = :name")
+  Collection<HasIdAndName> findAllByNameUsingDto(@Param("name") String name);
+
 }

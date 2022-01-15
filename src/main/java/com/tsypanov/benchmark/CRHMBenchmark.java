@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(value = Mode.AverageTime)
 public class CRHMBenchmark {
 
-	@Benchmark
-	public Object instantiate() {
-		return new ConcurrentReferenceHashMap<>();
-	}
+  @Benchmark
+  public Object instantiate() {
+    return new ConcurrentReferenceHashMap<>();
+  }
 
 }

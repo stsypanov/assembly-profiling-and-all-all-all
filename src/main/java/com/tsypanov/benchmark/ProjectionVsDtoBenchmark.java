@@ -19,34 +19,34 @@ import java.util.stream.Collectors;
 @BenchmarkMode(value = Mode.AverageTime)
 public class ProjectionVsDtoBenchmark {
 
-	private ManyFieldsRepository repository;
+  private ManyFieldsRepository repository;
 
-	@Param({"1", "100"})
-	private int count;
+  @Param({"1", "100"})
+  private int count;
 
-	@Setup
-	public void init() {
-		ConfigurableApplicationContext context = SpringApplication.run(Application.class);
-		context.registerShutdownHook();
+  @Setup
+  public void init() {
+    ConfigurableApplicationContext context = SpringApplication.run(Application.class);
+    context.registerShutdownHook();
 
-		repository = context.getBean(ManyFieldsRepository.class);
-		List<ManyFieldsEntity> entities = ThreadLocalRandom.current()
-				.longs(count)
-				.boxed()
-				.map(randomLong -> new ManyFieldsEntity(randomLong, String.valueOf(randomLong), "ivan"))
-				.collect(Collectors.toList());
+    repository = context.getBean(ManyFieldsRepository.class);
+    List<ManyFieldsEntity> entities = ThreadLocalRandom.current()
+        .longs(count)
+        .boxed()
+        .map(randomLong -> new ManyFieldsEntity(randomLong, String.valueOf(randomLong), "ivan"))
+        .collect(Collectors.toList());
 
-		repository.saveAll(entities);
-	}
+    repository.saveAll(entities);
+  }
 
-	@Benchmark
-	public Collection<HasIdAndName> dto() {
-		return repository.findAllByNameUsingDto("ivan");
-	}
+  @Benchmark
+  public Collection<HasIdAndName> dto() {
+    return repository.findAllByNameUsingDto("ivan");
+  }
 
-	@Benchmark
-	public Collection<HasIdAndName> projection() {
-		return repository.findAllByName("ivan");
-	}
+  @Benchmark
+  public Collection<HasIdAndName> projection() {
+    return repository.findAllByName("ivan");
+  }
 
 }
