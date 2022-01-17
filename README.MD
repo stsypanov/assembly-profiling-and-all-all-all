@@ -1,6 +1,6 @@
 **Примеры для доклада по низкоуровневому профилированию на SnowOne/JPoint**
 
-План самого доклада:
+План доклада:
 
 0. Предыстория. Даже если вы читали [https://habr.com/ru/post/432824/](https://habr.com/ru/post/432824/)
    доклад будет для вас интересным.
@@ -26,7 +26,7 @@ projection:·gc.alloc.rate.norm         100  avgt   50  517354,738 ±    34,719 
 2. Запуск теста `ManyFieldsRepositoryTest` с остановкой на бряке в последней строчке
    и исследование внутренностей двух полученных объектов.
 
-3. Профилирование `ProjectionProfilingBenchmark` для  определения горячих мест в коде.
+3. Профилирование `ProjectionProfilingBenchmark` для определения горячих мест в коде.
    Профилирование выполняется с помощью `JavaFlightRecorderProfiler`. Обнаруживаем, что горячим местом является создание
    `org.springframework.util.ConcurrentReferenceHashMap`
 
@@ -42,6 +42,17 @@ $ sudo sysctl kernel.kptr_restrict=0
    Также необходимо убедиться, что установлены отладочные символы (`apt install openjdk-8-dbg`/`apt install openjdk-11-dbg`).
    Сначала проверяем вывод `JavaFlightRecorderProfiler`-а и обнаруживаем, что он не даёт нужной нам точности.
    Проверяем вывод `AsyncProfiler`-а.
+```
+        ns  percent  samples  top
+----------  -------  -------  ---
+4270110916   27.81%      427  o.s.u.ConcurrentReferenceHashMap$Segment.<init>
+3920827445   25.53%      392  o.s.u.ConcurrentReferenceHashMap$ReferenceManager.<init>
+3691037002   24.04%      369  o.s.u.ConcurrentReferenceHashMap.createReferenceManager
+1719959854   11.20%      172  o.s.u.ConcurrentReferenceHashMap.<init>
+ 439959922    2.87%       44  java.lang.ref.ReferenceQueue.<init>
+ 279927288    1.82%       28  java.util.concurrent.locks.ReentrantLock.<init>
+  70590822    0.46%        7  smp_call_function_single_[k]
+  ```
 
 6. Поскольку использование `AsyncProfiler`-а не даёт требуемой точности, то воспользуемся `LinuxPerfAsmProfiler`-ом
    (`DTraceAsmProfiler` для MacOS)
@@ -49,7 +60,7 @@ $ sudo sysctl kernel.kptr_restrict=0
 java -jar target/benchmarks.jar CRHMBenchmark -f 2 -w 1s -r 1s -prof perfasm
 ```
 
-7. Объясняем смысл полученых данных, горячие места и исправления.
+7. Объясняем смысл полученных данных, горячие места и исправления.
 
 8. Рассказываем про практические выводы после первой части:
  - опасность `volatile` в цикле, читающем/пишущем в поле
@@ -58,6 +69,17 @@ java -jar target/benchmarks.jar CRHMBenchmark -f 2 -w 1s -r 1s -prof perfasm
   https://github.com/spring-projects/spring-framework/pull/25261
   https://github.com/spring-projects/spring-framework/pull/25846
   https://github.com/openjdk/jdk/pull/5197
+  https://github.com/openjdk/jdk/pull/510
+
+```
+Benchmark                                     Score   Error  Units
+
+VolatileFieldZeroingBenchmark.explicitInit   11.200 ± 0.270  ns/op
+VolatileFieldZeroingBenchmark.defultInit      3.447 ± 0.208  ns/op
+
+AtomicZeroingBenchmark.defaultValue           3,037 ± 0,100  ns/op
+AtomicZeroingBenchmark.explicitValue         13,976 ± 0,220  ns/op
+``` 
 
 10. Запускаем `CRHMBenchmark` на Java 11 или выше. Приходим к выводу, что для одного из горячих мест отсутствует
     ссылка на исполняемый байт-код. 
@@ -80,5 +102,27 @@ java -jar target/benchmarks.jar CRHMBenchmark -f 2 -w 1s -r 1s -prof perfasm
 ```shell
 java -jar target/benchmarks.jar TurnOffInliningBenchmark -f 2 -w 1s -r 1s -prof gc
 ```
+Итог таков:
+```
+Benchmark                                                                          Score    Error   Units
+
+TurnOffInliningBenchmark.calculate                                                51,099 ±  0,842   ns/op
+TurnOffInliningBenchmark.calculate:·gc.alloc.rate                                  0,001 ±  0,001  MB/sec
+TurnOffInliningBenchmark.calculate:·gc.alloc.rate.norm                            ≈ 10⁻⁴             B/op
+TurnOffInliningBenchmark.calculate:·gc.count                                         ≈ 0           counts
+
+TurnOffInliningBenchmark.calculateNoInlining                                     766,289 ± 17,697   ns/op
+TurnOffInliningBenchmark.calculateNoInlining:·gc.alloc.rate                     2443,419 ± 54,399  MB/sec
+TurnOffInliningBenchmark.calculateNoInlining:·gc.alloc.rate.norm                2944,301 ±  0,014    B/op
+TurnOffInliningBenchmark.calculateNoInlining:·gc.churn.G1_Eden_Space            2437,723 ± 70,539  MB/sec
+TurnOffInliningBenchmark.calculateNoInlining:·gc.churn.G1_Eden_Space.norm       2937,362 ± 52,498    B/op
+TurnOffInliningBenchmark.calculateNoInlining:·gc.churn.G1_Survivor_Space           0,015 ±  0,002  MB/sec
+TurnOffInliningBenchmark.calculateNoInlining:·gc.churn.G1_Survivor_Space.norm      0,018 ±  0,003    B/op
+TurnOffInliningBenchmark.calculateNoInlining:·gc.count                           596,000           counts
+TurnOffInliningBenchmark.calculateNoInlining:·gc.time                            469,000               ms
+```
 
 13. Итоговые выводы
+ - ручное зануление волатильных полей не только избыточно, но и вредно для производительности
+ - пользуйтесь флагами виртуальной машины при прогонах, они помогут вам сузить область поиска 
+ - выполняйте множество прогонов и собирайте статистику
