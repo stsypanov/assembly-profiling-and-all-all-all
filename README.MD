@@ -5,6 +5,7 @@
 0. Предыстория. Даже если вы читали [https://habr.com/ru/post/432824/](https://habr.com/ru/post/432824/)
    доклад будет для вас интересным.
    Настройка окружения описана в [https://habr.com/ru/post/542148/](https://habr.com/ru/post/542148/)
+   Настройка asyn-profiler-а описана [на странице проекта](https://github.com/jvm-profiling-tools/async-profiler)
 
 1. Постановка задачи. Запуск `ProjectionVsDtoBenchmark` показывает существенную разницу в производительности
    между выгрузкой данных с помощью DTO и проекций:
@@ -24,7 +25,8 @@ projection:·gc.alloc.rate.norm         100  avgt   50  517354,738 ±    34,719 
 ```
 
 2. Запуск теста `ManyFieldsRepositoryTest` с остановкой на бряке в последней строчке
-   и исследование внутренностей двух полученных объектов.
+   и исследование внутренностей двух полученных объектов. Оказывается, что проекция устроена намного сложнее и
+   основана на прокси.
 
 3. Профилирование `ProjectionProfilingBenchmark` для определения горячих мест в коде.
    Профилирование выполняется с помощью `JavaFlightRecorderProfiler`. Обнаруживаем, что горячим местом является создание
@@ -41,7 +43,7 @@ $ sudo sysctl kernel.kptr_restrict=0
 ```
    Также необходимо убедиться, что установлены отладочные символы (`apt install openjdk-8-dbg`/`apt install openjdk-11-dbg`).
    Сначала проверяем вывод `JavaFlightRecorderProfiler`-а и обнаруживаем, что он не даёт нужной нам точности.
-   Проверяем вывод `AsyncProfiler`-а.
+   Проверяем вывод `AsyncProfiler`-а. Картина примерно та же.
 ```
         ns  percent  samples  top
 ----------  -------  -------  ---
@@ -98,7 +100,7 @@ AtomicZeroingBenchmark.explicitValue         13,976 ± 0,220  ns/op
 13. Андрей Паньгин предлагает элегантное решение: отключаем вклеивание с помощью `-XX:MaxInlineLevel=0`.
     Это действительно решает проблему, но может существенно исказить профиль, что показывает запуск `TurnOffInliningBenchmark`.
     Если при обычно прогоне все аллокации стираются, а горячим местом является инкремент, то при запуске с `-XX:MaxInlineLevel=0`
-    обёртки создаются и отравляют профиль.
+    обёртки создаются и отравляют профиль. Обратите внимание, что это работает только с новыми версиями Java (14 и старше).
 ```shell
 java -jar target/benchmarks.jar TurnOffInliningBenchmark -f 2 -w 1s -r 1s -prof gc
 ```
@@ -121,6 +123,8 @@ TurnOffInliningBenchmark.calculateNoInlining:·gc.churn.G1_Survivor_Space.norm  
 TurnOffInliningBenchmark.calculateNoInlining:·gc.count                           596,000           counts
 TurnOffInliningBenchmark.calculateNoInlining:·gc.time                            469,000               ms
 ```
+Таким образом, использование `-XX:MaxInlineLevel=0` даёт неожиданный эффект: в коде появляются ложные горячие места,
+которых в обычном режиме просто нет.
 
 13. Итоговые выводы
  - ручное зануление волатильных полей не только избыточно, но и вредно для производительности
