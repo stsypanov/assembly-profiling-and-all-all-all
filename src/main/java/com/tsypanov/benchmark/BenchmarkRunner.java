@@ -1,6 +1,9 @@
 package com.tsypanov.benchmark;
 
+import org.openjdk.jmh.profile.AsyncProfiler;
 import org.openjdk.jmh.profile.GCProfiler;
+import org.openjdk.jmh.profile.JavaFlightRecorderProfiler;
+import org.openjdk.jmh.profile.LinuxPerfAsmProfiler;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -27,12 +30,11 @@ public class BenchmarkRunner {
 //						.addProfiler(LinuxPerfAsmProfiler.class)
             .forks(2)
             .shouldFailOnError(true)
-            .jvmArgsAppend(
+//            .jvmArgsAppend(
 //						"-XX:+UnlockDiagnosticVMOptions"
 //						,"-XX:+DebugNonSafepoints"
 //						,"-XX:+PrintAssembly"
-//            ,"-XX:MaxInlineLevel=0"
-            )
+//            )
             .build();
 
     new Runner(opt).run();
