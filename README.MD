@@ -2,9 +2,11 @@
 
 План доклада:
 
-0. Предыстория. Даже если вы читали [https://habr.com/ru/post/432824/](https://habr.com/ru/post/432824/)
+0. Предыстория. Даже если вы читали статью [Ускоряем создание ConcurrentReferenceHashMap](https://habr.com/ru/post/432824/)
    доклад будет для вас интересным.
-   Настройка окружения описана в [https://habr.com/ru/post/542148/](https://habr.com/ru/post/542148/)
+   Настройка окружения описана в статье [Профилирование с точностью до ассемблерных инструкций](https://habr.com/ru/post/542148/)
+   Настройка asyn-profiler-а описана [на странице проекта](https://github.com/jvm-profiling-tools/async-profiler)
+   Настройка asyn-profiler-а описана [на странице проекта](https://github.com/jvm-profiling-tools/async-profiler)
    Настройка asyn-profiler-а описана [на странице проекта](https://github.com/jvm-profiling-tools/async-profiler)
 
 1. Постановка задачи. Запуск `ProjectionVsDtoBenchmark` показывает существенную разницу в производительности
